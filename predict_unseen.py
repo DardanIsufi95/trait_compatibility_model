@@ -40,7 +40,7 @@ print(f"✓ Model loaded successfully from: {model_path}")
 
 # Load user traits for easy lookup
 print("\nLoading user traits database...")
-traits_df = pd.read_csv("user_traits.csv")
+traits_df = pd.read_csv("user_traits_unseen.csv")
 traits_dict = {}
 for _, row in traits_df.iterrows():
     user_id = row['id']
@@ -69,7 +69,7 @@ def evaluate_model_samples(num_samples=20):
     print(f"\nEvaluating model on {num_samples} random pairs from the dataset...")
     
     # Load the actual pair scores for comparison
-    pairs_df = pd.read_csv("user_pair_score.csv")
+    pairs_df = pd.read_csv("user_pair_score_unseen.csv")
     
     # Sample random pairs
     sample_pairs = pairs_df.sample(n=num_samples, random_state=42)
