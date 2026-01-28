@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# TensorFlow / Keras (exclude models trained locally)
+matchmaking_model.keras
+*.h5
+*.hdf5
+*.pb
+
+# Training outputs (exclude local training plots)
+training_history.png
+*.ckpt
+*.ckpt.*
+logs/
+checkpoints/
+
+# Keep pretrained model and plots (they're part of the repo)
+!matchmaking_model_pretrained.keras
+!training_history_pretrained.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files (optional - uncomment if you want to exclude large CSV files)
+# user_traits.csv
+# user_pair_score.csv
+
+# OS
+Thumbs.db
+.directory
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Model artifacts (if you want to exclude trained models)
+# matchmaking_model.keras
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
